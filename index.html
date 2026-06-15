@@ -1,676 +1,1190 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <title>Aman Raj Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Aman Raj — Full Stack Developer & AI Engineer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #f5a623;
+      --accent-dark: #e09010;
+      --dark: #0d0d0d;
+      --darker: #070707;
+      --light-text: #b0b0b0;
+      --card-bg: #161616;
+      --border: rgba(255,255,255,0.07);
+    }
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    * { box-sizing: border-box; }
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    html { scroll-behavior: smooth; }
 
-    <link rel="stylesheet" href="css/aos.css">
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: #e8e8e8;
+      overflow-x: hidden;
+      font-size: 18px;
+    }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    /* ── NAV ── */
+    #ftco-navbar {
+      background: rgba(7,7,7,0.92) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 0;
+      transition: all 0.3s ease;
+    }
+    #ftco-navbar.scrolled {
+      padding: 0.4rem 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .navbar-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--accent) !important;
+      letter-spacing: 0.02em;
+    }
+    .nav-link span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover span { color: var(--accent); }
 
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    /* ── HERO ── */
+    .hero { background: var(--darker); min-height: 100vh; position: relative; }
+    .slider-item {
+      background: linear-gradient(135deg, #0d0d0d 0%, #111 60%, #1a1200 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .slider-item .overlay {
+      background: rgba(0,0,0,0.45);
+    }
+    .hero-text .subheading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .hero-text h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3.5rem, 7vw, 6rem);
+      font-weight: 800;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero-text h1 span { color: var(--accent); background: linear-gradient(90deg, #f5a623, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-    <style>
-      /*======================================
-//--//-->   ABOUT
-======================================*/
+    #typing-animation {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      color: #d0d0d0;
+      display: block;
+      min-height: 3rem;
+      border-right: 3px solid var(--accent);
+      padding-right: 6px;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink { 50% { border-color: transparent; } }
 
-      .about-mf .box-shadow-full {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
+    .hero-img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 24px;
+      border: none;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 40px rgba(245,166,35,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .hero-img:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 60px rgba(245,166,35,0.2);
+    }
 
-      .about-mf .about-img {
-        margin-bottom: 2rem;
-      }
+    .btn-accent {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #000;
+      font-weight: 700;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(245,166,35,0.3);
+    }
+    .btn-accent:hover {
+      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(245,166,35,0.4);
+      color: #000;
+      text-decoration: none;
+    }
+    .btn-sm {
+      padding: 0.6rem 1.4rem !important;
+      font-size: 0.75rem !important;
+    }
 
-      .about-mf .about-img img {
-        margin-left: 10px;
-      }
+    .btn-outline-accent {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      font-weight: 700;
+      padding: 0.85rem 2rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline-accent:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(245,166,35,0.25);
+      text-decoration: none;
+    }
 
-      .skill-mf .progress {
-        /* background-color: #cde1f8; */
-        margin: 0.5rem 0 1.2rem;
-        border-radius: 0;
-        height: 0.7rem;
-      }
+    /* ── SECTIONS ── */
+    section { padding: 110px 0; }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.6rem;
+      line-height: 1.1;
+    }
+    .section-line {
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #ffd700);
+      border-radius: 2px;
+      margin: 1.2rem 0 2.5rem;
+    }
+    .section-line.center { margin: 1.2rem auto 2.5rem; }
 
-      .skill-mf .progress .progress-bar {
-        height: 0.7rem;
-        background-color: #ffbd39;
-      }
+    /* ── ABOUT ── */
+    #about-section { background: #0f0f0f; }
 
-      /* Animation styles */
-      #typing-animation {
-        position: relative;
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 3s steps(20, end) infinite;
-      }
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+    .about-card:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); border-color: rgba(245,166,35,0.2); }
+    .about-info-list li {
+      display: flex;
+      gap: 1.2rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.05rem;
+    }
+    .about-info-list li:last-child { border-bottom: none; }
+    .about-info-list .lbl {
+      min-width: 110px;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
-      #typing-animation:before {
-        content: "";
-        /* position: absolute; */
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: #ccc;
-        animation: typing-cursor 0.5s ease-in-out infinite;
-      }
+    /* Skill bars */
+    .skill-item { margin-bottom: 1.4rem; }
+    .skill-item .skill-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #d0d0d0;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .skill-track {
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 8px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--accent), #ffd700);
+      transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0;
+    }
+    .skill-fill.animate { width: var(--target-width); }
 
-      @keyframes typing {
-        from {
-          width: 0;
-        }
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: linear-gradient(90deg, #0f0f0f, #1a1200, #0f0f0f);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 0;
+    }
+    .stat-box { text-align: center; padding: 1.5rem; transition: all 0.3s ease; }
+    .stat-box:hover { transform: translateY(-5px); }
+    .stat-box .num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .stat-box .lbl { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #999; margin-top: 0.5rem; }
 
-        to {
-          width: 100%;
-        }
-      }
+    /* ── EXPERIENCE / EDUCATION ── */
+    #resume-section { background: var(--dark); }
 
-      @keyframes typing-cursor {
-        from {
-          width: 5px;
-        }
+    .timeline-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.8rem;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .timeline-card:hover {
+      transform: translateY(-6px) translateX(4px);
+      box-shadow: 0 20px 50px rgba(245,166,35,0.1);
+      border-color: rgba(245,166,35,0.3);
+    }
+    .timeline-card .tc-date {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+    .timeline-card .tc-org {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+    .timeline-card ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    .timeline-card ul li {
+      font-size: 1.05rem;
+      color: #c0c0c0;
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
+    }
+    .timeline-card p {
+      font-size: 1.05rem;
+      color: #c0c0c0;
+      margin: 0;
+      line-height: 1.8;
+    }
+    .col-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .col-label::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border), transparent);
+      margin-left: 0.5rem;
+    }
 
-        to {
-          width: 0;
-        }
-      }
+    /* ── PROJECTS ── */
+    #project-section { background: #0a0a0a; }
 
-      /* project image zoom effect */
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.3rem;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 70px rgba(245,166,35,0.15);
+      border-color: rgba(245,166,35,0.4);
+    }
+    .project-card .proj-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.9rem;
+    }
+    .project-card p {
+      font-size: 1.05rem;
+      color: #b0b0b0;
+      line-height: 1.8;
+      flex: 1;
+    }
+    .project-card .proj-links {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.8rem;
+    }
+    .proj-link {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(245,166,35,0.3);
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .proj-link:hover { background: var(--accent); color: #000; text-decoration: none; transform: translateY(-2px); }
 
-      .zoom-effect {
-        overflow: hidden;
-        transition: transform 0.3s ease-out;
-      }
+    /* ── SKILLS SECTION ── */
+    #skills-section { background: #0f0f0f; }
 
-      .zoom-effect:hover {
-        transform: scale(1.1);
-      }
+    .skill-group-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+    .skill-tag {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: #d0d0d0;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .skill-tag:hover {
+      background: rgba(245,166,35,0.15);
+      border-color: rgba(245,166,35,0.5);
+      color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(245,166,35,0.1);
+    }
 
-      @media screen and (orientation: portrait) {
-        body {
-          margin-left: 5%;
-          margin-right: 5%;
-        }
+    /* ── CERTIFICATIONS ── */
+    #certs-section { background: var(--dark); }
 
-        .order-md-last {
-          visibility: hidden;
-        }
+    .cert-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .cert-card:hover { transform: translateX(8px); border-color: rgba(245,166,35,0.4); box-shadow: 0 10px 30px rgba(245,166,35,0.08); }
+    .cert-icon {
+      width: 50px; height: 50px;
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.4rem;
+    }
+    .cert-card h4 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
+    .cert-card p { font-size: 0.82rem; color: #999; margin: 0; }
 
-        .about-img img {
-          content: url("images/me.png");
-        }
-      }
-    </style>
+    .patent-card {
+      background: linear-gradient(135deg, rgba(245,166,35,0.15), rgba(245,166,35,0.05));
+      border: 2px solid rgba(245,166,35,0.5);
+      box-shadow: 0 15px 40px rgba(245,166,35,0.15);
+    }
+    .patent-icon {
+      background: rgba(245,166,35,0.2);
+      border: 2px solid rgba(245,166,35,0.6);
+      font-size: 1.8rem;
+    }
+    .patent-title {
+      font-size: 1.25rem !important;
+      color: var(--accent) !important;
+    }
+    .patent-desc {
+      font-size: 1rem !important;
+      color: #c0c0c0 !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.6 !important;
+    }
+    .patent-meta {
+      font-size: 0.9rem;
+      color: rgba(245,166,35,0.9);
+      font-weight: 600;
+    }
 
-  </head>
+    /* ── CONTACT ── */
+    #contact-section { background: #0a0a0a; }
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    .contact-info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2.2rem 1.8rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .contact-info-card:hover { transform: translateY(-8px); border-color: rgba(245,166,35,0.4); box-shadow: 0 20px 50px rgba(245,166,35,0.1); }
+    .contact-info-card .ci-icon {
+      width: 60px; height: 60px;
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .contact-info-card h4 { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 0.5rem; }
+    .contact-info-card p, .contact-info-card a { font-size: 0.95rem; color: #e0e0e0; text-decoration: none; }
+    .contact-info-card a:hover { color: var(--accent); }
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Aman Raj</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span>
-          Menu
-        </button>
+    .contact-form-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem;
+    }
+    .contact-form-wrap .form-control {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      color: #e8e8e8;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      padding: 1rem 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .contact-form-wrap .form-control:focus {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(245,166,35,0.6);
+      box-shadow: 0 0 0 4px rgba(245,166,35,0.1);
+      color: #fff;
+      outline: none;
+    }
+    .contact-form-wrap label { font-size: 0.78rem; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.6rem; }
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item">
-              <a href="#home-section" class="nav-link">
-                <span>Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#about-section" class="nav-link">
-                <span>About</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume-section" class="nav-link">
-                <span>Resume</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact-section" class="nav-link">
-                <span>Contact</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#send-message" class="nav-link">
-                <span>Message me</span></a>
-            </li>
+    /* ── FOOTER ── */
+    footer {
+      background: var(--darker);
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+    footer .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.8rem; }
+    .social-btn {
+      width: 50px; height: 50px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #999;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .social-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(245,166,35,0.1); text-decoration: none; transform: translateY(-4px); }
+    footer p { font-size: 0.8rem; color: #666; margin: 0; }
+
+    /* ── MISC ── */
+    .text-accent { color: var(--accent) !important; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    @media (max-width: 768px) {
+      section { padding: 70px 0; }
+      .hero-img { max-width: 400px; margin-top: 2.5rem; }
+    }
+
+    /* Floating particles effect */
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.3;
+      animation: float 6s infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="80">
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target fixed-top" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">Aman Raj</a>
+    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav">
+      <span class="oi oi-menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+        <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+        <li class="nav-item"><a href="#certs-section" class="nav-link"><span>Certs</span></a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container" style="padding-top: 100px;">
+        <div class="row align-items-center" style="min-height: 100vh;">
+          <div class="col-md-6 ftco-animate" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-text">
+              <span class="subheading">Software Developer & AI Engineer</span>
+              <h1>Hi, I'm<br><span>Aman Raj</span></h1>
+              <span id="typing-animation"></span>
+              <p style="margin-top: 1.5rem; font-size: 1rem; color: #aaa; max-width: 520px; line-height: 1.8;">
+                Final-year Computer Science Engineering student specializing in Full Stack Development and AI/ML. I build scalable applications and intelligent systems that solve real-world problems.
+              </p>
+              <div style="display:flex; gap:1.2rem; flex-wrap:wrap; margin-top:2.2rem;">
+                <a href="https://www.linkedin.com/in/amanraj01/" class="btn-accent">Connect on LinkedIn</a>
+                <a href="https://github.com/AMANRaj909/" class="btn-outline-accent">View GitHub</a>
+                <a href="https://drive.google.com/file/d/14JQb7SSAhsy6XVwJ0w8iUnxzb0T_S6uI/view?usp=sharing" class="btn-outline-accent">Download CV</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center ftco-animate" data-aos="fade-left" data-aos-duration="1200">
+            <img src="images/me.png" alt="Aman Raj" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS STRIP ═══ -->
+<div class="stats-strip" data-aos="fade-up">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-box">
+          <div class="num">8.0</div>
+          <div class="lbl">CGPA</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-box">
+          <div class="num">6+</div>
+          <div class="lbl">Projects</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-box">
+          <div class="num">2</div>
+          <div class="lbl">IEEE Papers</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-box">
+          <div class="num">1</div>
+          <div class="lbl">Filed Patent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about-section">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <span class="section-eyebrow">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+        <p style="font-size:0.98rem; color:#b0b0b0; line-height:1.9; margin-bottom:1.5rem;">
+          I'm a passionate Software Developer and AI Engineer with a strong focus on building reliable, scalable systems. With hands-on experience in Full Stack Development and Machine Learning, I love turning complex problems into simple, elegant solutions.
+        </p>
+        <p style="font-size:0.98rem; color:#b0b0b0; line-height:1.9;">
+          My technical journey includes LLM fine-tuning, building real-time web applications, and developing intelligent systems. When I'm not coding, you'll find me exploring new technologies, playing video games, or capturing moments through travel photography.
+        </p>
+        <div style="margin-top:2.5rem;">
+          <a href="https://leetcode.com/u/Amanconnect010" class="btn-outline-accent" style="font-size:0.78rem;">View LeetCode Profile</a>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="about-card">
+          <ul class="about-info-list" style="list-style:none; padding:0; margin:0 0 2rem;">
+            <li><span class="lbl">Full Name</span><span>Aman Raj</span></li>
+            <li><span class="lbl">Degree</span><span>B.Tech — Computer Science & Engineering (2026)</span></li>
+            <li><span class="lbl">University</span><span>Sharda University, Greater Noida</span></li>
+            <li><span class="lbl">CGPA</span><span>8.0 / 10</span></li>
+            <li><span class="lbl">Location</span><span>Greater Noida, NCR</span></li>
+            <li><span class="lbl">Email</span><span>amanconnect010@gmail.com</span></li>
+            <li><span class="lbl">Languages</span><span>English, Hindi</span></li>
+          </ul>
+
+          <p style="font-size:0.72rem; font-weight:800; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:1.2rem;">Core Competencies</p>
+          <div class="skill-item">
+            <div class="skill-name">Java & Spring Boot</div>
+            <div class="skill-track"><div class="skill-fill" style="--target-width: 92%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">JavaScript / React / Node.js</div>
+            <div class="skill-track"><div class="skill-fill" style="--target-width: 88%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Python / ML / LLMs</div>
+            <div class="skill-track"><div class="skill-fill" style="--target-width: 85%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">SQL / PostgreSQL</div>
+            <div class="skill-track"><div class="skill-fill" style="--target-width: 90%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">C++ / Data Structures & Algorithms</div>
+            <div class="skill-track"><div class="skill-fill" style="--target-width: 82%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESUME ═══ -->
+<section id="resume-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-eyebrow">My Journey</span>
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="section-line center"></div>
+    </div>
+
+    <div class="row gy-4">
+      <!-- Experience -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="col-label">Professional Experience</div>
+
+        <div class="timeline-card">
+          <div class="tc-date">Dec 2025 – Feb 2026</div>
+          <h3>LLM Engineer Intern</h3>
+          <div class="tc-org">Ethara AI</div>
+          <ul>
+            <li>Fine-tuned Large Language Models to improve accuracy by 35% through systematic prompt engineering and evaluation</li>
+            <li>Reduced model hallucinations by implementing structured testing frameworks and parameter optimization</li>
+            <li>Optimized inference pipelines, achieving 2x throughput improvement using batching and caching strategies</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <div class="tc-date">May 2025 – Jul 2025</div>
+          <h3>Technical Support Intern</h3>
+          <div class="tc-org">Homies4U (Startup)</div>
+          <ul>
+            <li>Maintained 90%+ platform uptime through proactive issue resolution and debugging</li>
+            <li>Improved UI/UX experience by identifying and resolving critical user-facing issues</li>
+            <li>Enhanced system reliability by implementing monitoring and logging solutions</li>
           </ul>
         </div>
       </div>
-    </nav>
-    <section id="home-section" class="hero">
-      <div class="home-slider  owl-carousel">
-        <div class="slider-item ">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me.png);">
-                <div class="overlay"></div>
-              </div>
-              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                  <span class="subheading">Hello!</span>
-                  <h1 class="mb-4 mt-3">I'm
-                    <span>Aman Raj</span></h1>
 
-                  <!-- Element to contain animated typing -->
-                  <span id="typing-animation"></span>
+      <!-- Education -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-label">Academic Background</div>
 
-                  <script>
-                    // Initialize the typing animation
-                    const typingAnimationElement = document.getElementById('typing-animation');
+        <div class="timeline-card">
+          <div class="tc-date">Aug 2022 – Jul 2026</div>
+          <h3>B.Tech — Computer Science & Engineering</h3>
+          <div class="tc-org">Sharda University, Greater Noida</div>
+          <p>CGPA: 8.0 / 10 &nbsp;·&nbsp; Specialization in Full Stack Development & Artificial Intelligence</p>
+        </div>
 
-                    // Create an array of typing text
-                    const typingTexts = [' Aspiring Software Developer     ', ' Proficient in SpringBoot & Full Stack Development ', 'Keen on Building Responsive Frontend & Backend Systems"   '];
+        <div class="timeline-card">
+          <div class="tc-date">2022</div>
+          <h3>Class XII — CBSE (PCM)</h3>
+          <div class="tc-org">Satyam International School, Patna</div>
+          <p>Score: 80% &nbsp;·&nbsp; Science Stream with Computer Science</p>
+        </div>
 
-                    // Create a function to display the typing animation for a given text
-                    function playTypingAnimation(text) {
-                      // Loop through each character and add it to the element
-                      for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => {
-                          typingAnimationElement.textContent += text[i];
-                        }, i * 100); // Decreased delay to speed up the typing animation
-                      }
+        <div class="timeline-card">
+          <div class="tc-date">2020</div>
+          <h3>Class X — CBSE</h3>
+          <div class="tc-org">Dr. D.Y. Patil International School, Patna</div>
+          <p>Score: 92% &nbsp;·&nbsp; Distinction in Science & Mathematics</p>
+        </div>
+      </div>
+    </div>
 
-                      // Once the animation is complete, reset the text and start over
-                      setTimeout(() => {
-                        typingAnimationElement.textContent = '';
-                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                      }, text.length * 100); // Adjusted delay accordingly
-                    }
+    <div class="text-center" style="margin-top:3.5rem;" data-aos="fade-up">
+      <a href="https://drive.google.com/file/d/14JQb7SSAhsy6XVwJ0w8iUnxzb0T_S6uI/view?usp=sharing" class="btn-accent">Download My Resume</a>
+    </div>
+  </div>
+</section>
 
-                    // Start the typing animation loop
-                    playTypingAnimation(typingTexts[0]);
-                  </script><br><br>
-                  <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-                  <!-- <br> -->
-                  <p>
-                    <a href="https://www.instagram.com/aman__raj.20_09?igsh=MmdxYTY4eHd2ZWdw" class="btn btn-primary py-3 px-4">My Instagram</a>
-                    <a href="https://www.linkedin.com/in/amanraj01/" class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+<!-- ═══ PROJECTS ═══ -->
+<section id="project-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-eyebrow">My Work</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="section-line center"></div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-card">
+          <span class="proj-tag">Full Stack · Production</span>
+          <h3>Hostel Management System</h3>
+          <p>Complete end-to-end system for managing student admissions, room allocations, and fee processing. Built with Node.js, Express, and PostgreSQL, achieving &lt;50ms response time with optimized database indexing. Features JWT authentication, role-based access control, and real-time updates.</p>
+          <div class="proj-links">
+            <a href="https://www.myhostell.site" class="proj-link">Live Demo</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-      <div class="container">
-        <div class="row">
-          <div class="row d-flex align-items-stretch">
-            <!-- <div class="row d-flex"> -->
-            <div class="col-md-6 col-lg-5 d-flex">
-              <div class="img-about img d-flex align-items-stretch">
-                <div class="overlay">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <!-- Details next to profile image -->
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p>
-                          <span class="title-s">Name:
-                          </span>
-                          <span>Aman Raj</span></p>
-                        <p>
-                          <span class="title-s">Job Role:
-                          </span>
-                          <span>Software Developer</span></p>
-                        <p>
-                          <!-- <span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> <p> -->
-                          <span class="title-s">Address:
-                          </span>
-                          <span>greater noida, ncr</span></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-mf">
-                    <p class="title-s">Skills</p>
-                    <span> Advance java</span>
-                    <!-- <span class="pull-right">85%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>SQL</span>
-                    <!-- <span class="pull-right">95%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>PYTHON</span>
-                    <!-- <span class="pull-right">85%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>Web development</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>Spring boot</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <span>C++</span>
-                    <!-- <span class="pull-right">99%</span> -->
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-              <div class="row justify-content-start pb-3">
-                <div class="col-md-12 heading-section ftco-animate">
-
-                  <h1 class="big">About</h1>
-                  <h2 class="mb-4">About Me</h2>
-
-                  <p>"Well-versed in Python, C++, C, and Java, with a solid foundation in SQL. Eager to contribute to innovative web development projects. Curiosity in technology and problem-solving led me to pursue a B.Tech in Computer Science. Specializing in languages like Java, Python, and C++, my academic and personal projects reveal a balanced skill set in both front-end and back-end development.
-
-With a systematic approach to learning and development, I have embraced frameworks like Spring Boot, enhancing my ability to contribute to sophisticated software solutions. My goal is to create software that not only meets the requirements but improves the lives of its users through intuitive interfaces and reliable functionalities.
-
-</p>
-                  <ul class="about-info mt-4 px-md-0 px-2">
-                    <li class="d-flex">
-                      <span>Profile:</span>
-                      <span>computer science and engineering &amp;</span></li>
-                    <li class="d-flex">
-                      <span>Domain:</span>
-                      <span>Software Developement</span></li>
-                    <li class="d-flex">
-                      <span>Education:</span>
-                      <span>Bachelor of technology</span></li>
-                    <li class="d-flex">
-                      <span>Language:</span>
-                      <span>English, Hindi </span></li>
-                    <!-- <li class="d-flex"> <span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
-                    <li class="d-flex">
-                      <span>Other Skills:</span>
-                      <span>
-                        Drawing proficiency, Observational skills, Creativity, Knowledge of art fundamentals, Technical proficiency, Communication skills, Time management, Adaptability &amp; Attention to detail</span></li>
-                    <li class="d-flex">
-                      <span>Interest:</span>
-                      <span>Traveling, Travel Photography, video games, Editing</span></li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                <div class="text">
-                  <!-- <p class="mb-4"> <span class="number" data-number="30">0</span> <span>+</span> <span>&nbsp; Projects completed</span> </p> -->
-                  <p>
-                    <a href="https://www.linkedin.com/in/amanraj01/" class="btn btn-primary py-3 px-3">LinkedIn</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <span class="proj-tag">AI · Android · Nov 2025</span>
+          <h3>FaceAuthApp — Missing Person ID</h3>
+          <p>Android application built with Java, integrating a Flask-based facial recognition API. Implements complete ML pipeline from face encoding to real-time matching verification, designed to assist law enforcement in identifying missing individuals.</p>
+          <div class="proj-links">
+            <a href="https://github.com/AMANRaj909/FaceAuthApp-Missing-Person-Identification-System" class="proj-link">GitHub Repo</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>"Well-versed in Python, C++, C, and Java, with a solid foundation in SQL. Eager to contribute to innovative web development projects. Curiosity in technology and problem-solving led me to pursue a B.Tech in Computer Science. Specializing in languages like Java, Python, and C++, my academic and personal projects reveal a balanced skill set in both front-end and back-end development.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <span class="proj-tag">MERN · Real-Time · Aug 2025</span>
+          <h3>Real-Time Chat Application</h3>
+          <p>Scalable messaging platform using Socket.IO and JWT-secured channels. MERN stack architecture with persistent message storage, optimized for low-latency delivery to thousands of concurrent users with seamless real-time communication.</p>
+          <div class="proj-links">
+            <a href="#" class="proj-link">View Code</a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="row">
-          <h1 class="big-4">Experience</h1>
-          <div class="underline"></div>
+<!-- ═══ SKILLS ═══ -->
+<section id="skills-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-eyebrow">Technologies</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="section-line center"></div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="skill-group-title">AI & Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">LLM Fine-Tuning</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">TensorFlow</span>
         </div>
-        <br>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-group-title">Web Development</div>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Socket.IO</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">HTML5/CSS3</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-group-title">Languages & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Android Studio</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-group-title">Core Computer Science</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">DBMS</span>
+          <span class="skill-tag">Operating Systems</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="row">
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certs-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-eyebrow">Achievements</span>
+      <h2 class="section-title">Certifications & Publications</h2>
+      <div class="section-line center"></div>
+    </div>
+
+    <div class="row gy-3">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.571 15.143v1.714c0 .473-.384.857-.857.857H5.143a.857.857 0 0 1-.857-.857v-1.714c0-.473.384-.857.857-.857h2.571c.473 0 .857.384.857.857Zm1.715 0v1.714c0 .473.384.857.857.857h2.571a.857.857 0 0 0 .857-.857v-1.714a.857.857 0 0 0-.857-.857h-2.571a.857.857 0 0 0-.857.857Zm10.285-3.428v1.714c0 .473-.384.857-.857.857h-2.571a.857.857 0 0 1-.857-.857v-1.714c0-.473.384-.857.857-.857h2.571c.473 0 .857.384.857.857Zm-12-1.715v1.715c0 .473.384.857.857.857h2.571a.857.857 0 0 0 .857-.857V10c0-.473-.384-.857-.857-.857h-2.571a.857.857 0 0 0-.857.857Zm13.714 0v1.715c0 .473-.384.857-.857.857h-2.571a.857.857 0 0 1-.857-.857V10c0-.473.384-.857.857-.857h2.571c.473 0 .857.384.857.857Zm-6.857 0v1.715c0 .473.384.857.857.857h2.571a.857.857 0 0 0 .857-.857V10c0-.473-.384-.857-.857-.857h-2.571a.857.857 0 0 0-.857.857ZM1.714 13.429V6.857C1.714 5.835 2.549 5 3.571 5h16.858c1.022 0 1.857.835 1.857 1.857v10.286c0 1.022-.835 1.857-1.857 1.857H3.571c-1.022 0-1.857-.835-1.857-1.857v-3.429h1.714v1.714c0 .473.384.857.857.857h2.571c.473 0 .857-.384.857-.857V10c0-.473-.384-.857-.857-.857H3.571a.857.857 0 0 0-.857.857v1.714H1.714Z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Oracle Academy — Java & Object-Oriented Programming</h4>
+            <p>Certified in Java fundamentals, OOP principles, and advanced programming concepts</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8Zm-1-13h2v6h-2Zm0 8h2v2h-2Z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>NPTEL — Project Management Fundamentals</h4>
+            <p>Certified in project planning, execution, and agile methodologies</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831a4.378 4.378 0 0 0-3.477-.563L7.163 7.67l5.362-5.75a1.384 1.384 0 0 0 .213-1.425A1.374 1.374 0 0 0 13.483 0Zm0 7.344a6.744 6.744 0 0 0-4.863 2.034l-.005.005-.005.005a6.744 6.744 0 1 0 9.565 9.516l.005-.005.005-.005a6.744 6.744 0 0 0-4.702-11.555Z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>LeetCode — SQL 50 Challenge Badge</h4>
+            <p>Completed all 50 SQL challenges demonstrating proficiency in database querying</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM7.453 10.924v2.153h1.337v-2.153H7.453Zm3.067 0v2.153h1.337v-2.153h-1.337Zm3.067 0v2.153h1.337v-2.153h-1.337Z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>2× IEEE Conference Publications</h4>
+            <p>Research papers published in IEEE-sponsored international conferences</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+        <div class="cert-card patent-card">
+          <div class="cert-icon patent-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.41l-.59.47V16h-4v-2.12l-.59-.47C9.02 12.14 8 10.63 8 9c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.63-1.02 3.14-2.15 4.41z"/>
+            </svg>
+          </div>
+          <div class="flex-grow-1">
+            <h4 class="patent-title">Patent Published — [INTELLIGENT FACIAL RECOGNITION-BASED SYSTEM AND METHOD FOR IDENTIFICATION AND REUNIFICATION OF MISSING PERSONS]</h4>
+            <p class="patent-desc">Official patent publication with innovative technology solutions in [Your Field]. Filed with [Patent Office], demonstrating novel contributions to the industry.</p>
+            <span class="patent-meta">📅 [	08/05/2026 ] • 📋 [202611036818]</span>
+          </div>
+          <div class="d-none d-md-block">
+            <a href="https://drive.google.com/file/d/12BtGaKE2WWl9MzgECrQ-yfcZ7-FEC9g0/view?usp=sharing" class="btn-accent btn-sm">View Patent</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-eyebrow">Let's Connect</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-line center"></div>
+    </div>
+
+    <div class="row gy-4 mb-5">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="contact-info-card">
+          <div class="ci-icon">📍</div>
+          <h4>Location</h4>
+          <p>Greater Noida, NCR</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-info-card">
+          <div class="ci-icon">📧</div>
+          <h4>Email</h4>
+          <p><a href="mailto:amanconnect010@gmail.com">amanconnect010@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="contact-info-card">
+          <div class="ci-icon">📱</div>
+          <h4>Phone</h4>
+          <p><a href="tel:+919142324099">+91 9142324099</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap" data-aos="fade-up">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="53850583-f0df-4410-b578-7dcc38204284">
+        <div class="row gy-4">
           <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">July 2024</span>
-              <h2>Web intern</h2>
-              <span class="position">A.ENGICON</span>
-              <p class="mt-4">Developed dynamic and responsive web applications using HTML, CSS, JavaScript, and popular frontend frameworks like React/Vue.
-Collaborated with the backend team to integrate APIs, ensuring seamless data flow and functionality.
-                <ul>
-                  <li>Utilized backend technologies such as Node.js and Express to build robust server-side applications.</li>
-                  <li>Conducted code reviews, debugging, and testing to maintain high-quality code standards.</li>
-                  <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-                </ul>
-              </p>
-            </div>
-
+            <label for="fullname" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your name" required>
           </div>
-
           <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">homieshostel</span>
-              <h2>Start-up(Team member)</h2>
-              <span class="position">Website management</span>
-              <p class="mt-4">
-                  <li>Researching market trends to meet client demands.</li>
-                  <li>Offering personalized art workshops for aspiring artists.</li>
-                  <li>Collaborating with galleries to showcase my work.</li>
-
-                </ul>
-              </p>
-            </div>
-
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="col-md-12">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="How can I help you?" required>
+          </div>
+          <div class="col-md-12">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <div class="col-md-12 text-center">
+            <button class="btn-accent btn-lg" type="submit">Send Message</button>
           </div>
         </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-        <br>
-        <br>
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/amanraj01/" class="social-btn" title="LinkedIn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="https://github.com/AMANRaj909/" class="social-btn" title="GitHub">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="https://leetcode.com/u/Amanconnect010" class="social-btn" title="LeetCode">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831a4.378 4.378 0 0 0-3.477-.563L7.163 7.67l5.362-5.75a1.384 1.384 0 0 0 .213-1.425A1.374 1.374 0 0 0 13.483 0Zm0 7.344a6.744 6.744 0 0 0-4.863 2.034l-.005.005-.005.005a6.744 6.744 0 1 0 9.565 9.516l.005-.005.005-.005a6.744 6.744 0 0 0-4.702-11.555Z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/aman__raj.20_09?igsh=MmdxYTY4eHd2ZWdw" class="social-btn" title="Instagram">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324Zm0 10.164a4.002 4.002 0 1 1 0-8.004 4.002 4.002 0 0 1 0 8.004Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/>
+        </svg>
+      </a>
+    </div>
+    <p>© 2026 Aman Raj. All rights reserved.</p>
+  </div>
+</footer>
 
-        <div class="row">
-          <h1 class="big-4">Education</h1>
-          <div class="underline"></div>
-        </div>
-        <br>
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+  <svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+  </svg>
+</div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2022-present</span>
-              <h2>Bachelor of technology</h2>
-              <span class="position"> Sharda University</span>
-              <p class="mt-4">Cgpa: 8+</p>
-            </div>
-          </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
 
-          <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-              <span class="date">2019-2020</span>
-              <h2>Higher Secondary School</h2>
-              <span class="position">CBSE (PCM)</span>
-              <p class="mt-4">Grade: 91%.</p>
-            </div>
-          </div>
-        </div>
+<script>
+  // Initialize AOS (Animate On Scroll)
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: 'ease-out-cubic'
+    });
 
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-6 text-center ftco-animate">
-            <p>
-              <a href="https://drive.google.com/file/d/15NJ6cViW_3BetTZT4OwZ355GRFvi0fvE/view?usp=drive_link">Download CV</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    // Navbar scroll effect
+    const navbar = document.getElementById('ftco-navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-    <!-- <section class="ftco-section" id="project-section"> <div class="container"> <div class="row justify-content-center mb-5 pb-5"> <div class="col-md-7 heading-section text-center ftco-animate"> <h1 class="big big-2">Projects</h1> <h2 class="mb-4">Projects</h2> <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p> </div> </div> <div class="row d-flex"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a> </h3> <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a> </h3> <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a> </h3> <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> </div> </div> </div> </div> <br> <div class="row d-flex justify-content-center"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a> </h3> <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a> </h3> <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> </div> </div> </div> </div> </div> </section> -->
-
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="hid" style="visibility:hidden">
-        <div class="container">
-          <div class="row d-md-flex align-items-center">
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <strong class="number" data-number="7">0</strong>
-                  <span>Achievements</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-              <div class="block-18">
-                <div class="text">
-                  <strong class="number" data-number="3">0</strong>
-                  <span>Projects</span>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="1000">0</strong> <span>Mentored Students</span> </div> </div> </div> <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="500">0</strong> <span>Cups of coffee</span> </div> </div> </div> -->
-          </div>
-        </div>
-      </div>
-
-      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-        <!-- <div class="container"> -->
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>Here's my<span>
-                <a href="https://github.com/AMANRaj909/" class="btn btn-white btn-outline-yellow py-3 px-5">Github</a>
-              
-              </span>
-            </h2>
-            <div class="heading">
-              <h4>
-                I love to code &amp; create something awesome.
-              </h4>
-              <br>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
-      </div>
-    </section>
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map-signs"></span>
-              </div>
-              <h3 class="mb-4">Address</h3>
-              <p>Greater Noida, NCR</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
-              </div>
-              <h3 class="mb-4">Contact Number</h3>
-              <p>
-                <a href="tel://7470695586">+91 9142324099</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
-              </div>
-              <h3 class="mb-4">Email Address</h3>
-              <p>
-                <a href="mailto:devnathanurag7.com">actionsaman909@gmail.com</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
-              </div>
-              <h3 class="mb-4">Download Resume</h3>
-              <p>
-                <a href="https://drive.google.com/file/d/15NJ6cViW_3BetTZT4OwZ355GRFvi0fvE/view?usp=drive_link">Resume Link</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="container">
-            <br>
-            <br>
-            <div class="row justify-content-center">
-              <div class="col-md-7 ftco-animate text-center">
-                <h2>Have a<span>
-                    Question?
-                  </span>
-                </h2>
-                <div class="que" id="send-message">
-                  <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="53850583-f0df-4410-b578-7dcc38204284">
-                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                      <div class="col-12">
-                        <label for="fullname" class="form-label">Full Name
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required="required">
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="email" class="form-label">Email
-                          <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewbox="0 0 16 16">
-                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                            </svg>
-                          </span>
-                          <input type="email" class="form-control" id="email" name="email" value="" required="required">
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <div class="input-group">
-                          <span class="input-group-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewbox="0 0 16 16">
-                              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                          </span>
-                          <input type="tel" class="form-control" id="phone" name="phone" value="">
-                        </div>
-                      </div><br>
-                      <div class="col-12">
-                        <label for="subject" class="form-label">Subject
-                          <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="subject" name="subject" value="" required="required">
-                      </div>
-                      <div class="col-12">
-                        <label for="message" class="form-label">Message
-                          <span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required="required"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <div class="d-grid"><br>
-                          <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <br>
-            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-              <li class="ftco-animate normal-txt">Find me on
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://www.youtube.com/@RishabhMishraOfficial"> <span class="icon-youtube"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.linkedin.com/in/amanraj01/">
-                  <span class="icon-linkedin"></span></a>
-              </li>
-              <li class="ftco-animate">
-                <a href="https://twitter.com/">
-                  <span class="icon-twitter"></span></a>
-              </li>
-              <!-- <li class="ftco-animate"> <a href="https://twitter.com/rishabhnmishra"> <span class="icon-facebook"></span></a> </li> -->
-              <li class="ftco-animate">
-                <a href="https://www.instagram.com/aman__raj.20_09?igsh=MmdxYTY4eHd2ZWdw">
-                  <span class="icon-instagram"></span></a>
-              </li>
-            </ul>
-            <br>
-          </div>
-        </div>
-      </section>
-
-      <footer class="ftco-footer ftco-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-
-              <p style="display: none;">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This template is made with
-                <i class="icon-heart color-danger" aria-hidden="true"></i>
-                by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px">
-          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
-      </div>
-
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery-migrate-3.0.1.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.1.3.js"></script>
-      <script src="js/jquery.waypoints.min.js"></script>
-      <script src="js/jquery.stellar.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/jquery.animateNumber.min.js"></script>
-      <script src="js/scrollax.min.js"></script>
-
-      <script src="js/main.js"></script>
-      <script>
-        function gitClick() {
-          window.location.href = 'https://github.com/AMANRaj909';
+    // Animate skill bars when they come into view
+    const observerOptions = { threshold: 0.5 };
+    const skillObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const fills = entry.target.querySelectorAll('.skill-fill');
+          fills.forEach(fill => fill.classList.add('animate'));
         }
-      </script>
+      });
+    }, observerOptions);
 
-    </body>
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) skillObserver.observe(aboutSection);
+  });
 
-  </html>
+  // Enhanced Typing Animation
+  const typingTexts = [
+    "Full Stack Developer",
+    "AI & Machine Learning Engineer",
+    "Spring Boot & Java Expert",
+    "Problem Solver & Tech Enthusiast",
+    "Building Scalable Applications"
+  ];
+
+  function type() {
+    const typingElement = document.getElementById('typing-animation');
+    if (!typingElement) return;
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function animate() {
+      const currentText = typingTexts[textIndex];
+      if (!isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(animate, 2500);
+          return;
+        }
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % typingTexts.length;
+        }
+      }
+      const typingSpeed = isDeleting ? 40 : 80;
+      setTimeout(animate, typingSpeed);
+    }
+    animate();
+  }
+
+  // Start typing animation
+  window.addEventListener('load', type);
+</script>
+
+</body>
+</html>
